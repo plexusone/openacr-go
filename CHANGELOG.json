@@ -1,0 +1,54 @@
+{
+  "irVersion": "1.0",
+  "project": "openacr-go",
+  "repository": "https://github.com/plexusone/openacr-go",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": ["plexusone"],
+  "releases": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-06-06",
+      "commit": "fad983e",
+      "highlights": [
+        { "description": "Go library for reading, writing, and validating OpenACR (Open Accessibility Conformance Report) documents" }
+      ],
+      "added": [
+        { "description": "Core types: `Report`, `Product`, `Contact`, `Chapter`, `Criterion`, `Component`, `Adherence`", "commit": "1551300" },
+        { "description": "`ComponentName` and `AdherenceLevel` constants with validation methods", "commit": "1551300" },
+        { "description": "`Load`, `LoadYAML`, `LoadJSON` for reading OpenACR files", "commit": "fae677e" },
+        { "description": "`Save`, `WriteYAML`, `WriteJSON`, `YAML()`, `JSON()` for output", "commit": "fae677e" },
+        { "description": "Functional options: `WithProduct`, `WithAuthor`, `WithCatalog`, `WithReportDateNow`", "commit": "fae677e" },
+        { "description": "`Validate()` for basic validation and `ValidateAgainstCatalog()` for catalog checking", "commit": "778eef0" },
+        { "description": "`catalog` package with 9 embedded GSA catalog YAML files via `go:embed`", "commit": "153f4c9" },
+        { "description": "`catalog.Get()`, `catalog.List()`, `catalog.MustGet()`, `catalog.Exists()` for catalog access", "commit": "153f4c9" },
+        { "description": "`schema` package with embedded JSON Schema and validation via `jsonschema/v5`", "commit": "fe97db4" },
+        { "description": "`schema.NewValidator()` and `schema.Validate()` for JSON Schema validation", "commit": "fe97db4" },
+        { "description": "Basic usage example in `examples/basic/`", "commit": "8594c1b" }
+      ],
+      "tests": [
+        { "description": "Unit tests for Report, loader, and validation functions", "commit": "f139d69" },
+        { "description": "Test fixtures from GSA/openacr: valid.yaml, drupal-9.yaml, invalid examples", "commit": "f139d69" },
+        { "description": "Catalog package tests for all 9 embedded catalogs", "commit": "153f4c9" },
+        { "description": "Schema package tests for validation", "commit": "fe97db4" }
+      ],
+      "fixed": [
+        { "description": "Lint issues: gofmt formatting and gosec G306 file permissions (0644 → 0600)", "commit": "fad983e" }
+      ],
+      "documentation": [
+        { "description": "README with installation, quick start, API reference, and catalog documentation", "commit": "7d4a3f4" },
+        { "description": "Package-level documentation in doc.go", "commit": "7d4a3f4" },
+        { "description": "MIT license", "commit": "7d4a3f4" }
+      ],
+      "dependencies": [
+        { "description": "`gopkg.in/yaml.v3` for YAML parsing", "commit": "0b294e1" },
+        { "description": "`github.com/santhosh-tekuri/jsonschema/v5` for JSON Schema validation", "commit": "0b294e1" }
+      ],
+      "build": [
+        { "description": "GitHub Actions workflows for CI, linting, and CodeQL SAST", "commit": "0b294e1" },
+        { "description": "golangci-lint configuration", "commit": "0b294e1" },
+        { "description": "Dependabot configuration for Go modules", "commit": "0b294e1" }
+      ]
+    }
+  ]
+}
