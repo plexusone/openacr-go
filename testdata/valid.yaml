@@ -1,0 +1,60 @@
+title: Lorem Ipsum
+product:
+  name: Lorem Ipsum
+  version: "1.1"
+  description: Fake text
+author:
+  name: Cicero
+  company_name: Fake text Inc.
+  address: Rome
+  email: cicero@example.com
+  website: https://en.wikipedia.org/wiki/Lorem_ipsum
+vendor:
+  company_name: Fake text Inc.
+  email: contact@example.com
+notes: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet viverra lorem. Nullam laoreet vitae lorem et semper. Donec feugiat rutrum luctus. Nunc nec scelerisque orci. Mauris non tellus congue, vestibulum felis at, consectetur dui. Aenean luctus dictum diam. Vestibulum vehicula leo nulla, nec hendrerit felis sodales a. In hac habitasse platea dictumst. Phasellus odio felis, efficitur a mattis vitae, fermentum vitae libero. Nam ut magna id sem pellentesque ultrices. Nulla sed urna vel tortor vehicula varius. Sed scelerisque porta nisi, sit amet ultricies ante ullamcorper quis.
+evaluation_methods_used: Use of automated tools like WAVE and Accessibility Insights. Manual keyboard only testing. Some testing with JAWS, NVDA and VoiceOver.
+legal_disclaimer: The information herein is provided in good faith based on the analysis of the web application at the time of the review and does not represent a legally-binding claim. Please contact us to report any accessibility errors or conformance claim errors for re-evaluation and correction, if necessary.
+repository: https://github.com/GSA/openacr/blob/main/tests/examples/valid.yaml
+feedback: https://github.com/GSA/openacr/issues
+chapters:
+  success_criteria_level_a:
+    criteria:
+      - num: "1.1.1"
+        components:
+          - name: "web"
+            adherence:
+              level: "supports"
+              notes: Cras ultrices, diam in laoreet condimentum, purus leo tempor erat, eu facilisis erat tortor at purus.
+          - name: "electronic-docs"
+            adherence:
+              level: "supports"
+              notes: Curabitur tristique tellus quis ligula elementum, sit amet tincidunt est aliquet.
+          - name: "software"
+            adherence:
+              level: "not-applicable"
+          - name: "authoring-tool"
+            adherence:
+              level: "supports"
+              notes: Vestibulum sit amet tortor ac nunc rutrum consequat vel sit amet risus. Nam eget mollis odio, sit amet bibendum mi. Quisque ac neque a nulla dapibus imperdiet.
+      - num: "1.2.2"
+        components:
+          - name: "web"
+            adherence:
+              level: partially-supports
+              notes: Nam a cursus nulla. Vestibulum tincidunt tincidunt volutpat.
+          - name: "electronic-docs"
+            adherence:
+              level: partially-supports
+              notes: Sed tempor accumsan nisl viverra viverra.
+          - name: "software"
+            adherence:
+              level: not-applicable
+          - name: "authoring-tool"
+            adherence:
+              level: does-not-support
+              notes: There is no additional support for authors within the authoring interface to explain how this can be done.
+  hardware:
+    notes: "Lorem Ipsum is a web application. Hardware accessibility criteria is not applicable."
+  software:
+    disabled: true
