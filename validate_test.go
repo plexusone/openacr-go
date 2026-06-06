@@ -40,7 +40,7 @@ func TestValidate(t *testing.T) {
 		},
 		{
 			name:       "missing both required fields",
-			report:    &Report{},
+			report:     &Report{},
 			expectErrs: 2,
 		},
 		{

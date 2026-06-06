@@ -50,7 +50,7 @@ func TestLoadInvalidFormat(t *testing.T) {
 	// Create a temp file with invalid extension
 	tmpDir := t.TempDir()
 	tmpFile := filepath.Join(tmpDir, "test.txt")
-	if err := os.WriteFile(tmpFile, []byte("test"), 0644); err != nil {
+	if err := os.WriteFile(tmpFile, []byte("test"), 0600); err != nil {
 		t.Fatal(err)
 	}
 

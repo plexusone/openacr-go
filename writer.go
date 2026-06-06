@@ -31,7 +31,7 @@ func (r *Report) Save(path string) error {
 		return err
 	}
 
-	return os.WriteFile(path, data, 0644)
+	return os.WriteFile(path, data, 0600)
 }
 
 // WriteYAML writes the report as YAML to the given writer.
