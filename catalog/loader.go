@@ -2,7 +2,7 @@ package catalog
 
 import (
 	"fmt"
-	"path/filepath"
+	"path"
 	"strings"
 )
 
@@ -48,7 +48,7 @@ func Get(id string) (*Catalog, error) {
 
 	// Load from embedded filesystem
 	filename := id + ".yaml"
-	data, err := catalogFS.ReadFile(filepath.Join("data", filename))
+	data, err := catalogFS.ReadFile(path.Join("data", filename))
 	if err != nil {
 		return nil, fmt.Errorf("%w: %s", ErrCatalogNotFound, id)
 	}
